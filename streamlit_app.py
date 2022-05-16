@@ -23,8 +23,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
-
-
 #create the repeatable code block (called a funsction)
 def get_fruityvice_data(this_fruit_choice):
          fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
@@ -58,11 +56,6 @@ if streamlit.button('Get Fruit Load List'):
       streamlit.dataframe(my_data_rows)
 # dont run anything apst here while we troubleshoot
 streamlit.stop()
-
-
-
-
-
 
 #Allow the end user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
